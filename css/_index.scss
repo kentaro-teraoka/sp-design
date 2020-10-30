@@ -2,10 +2,12 @@
 #top{
     display: flex;
     align-items: center;
-    background-image: url(../img/top_bg.jpg);
-    background-position: 60% center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: {
+        image: url(../img/top_bg.jpg);
+        position: 60% center;
+        size: cover;
+        repeat: no-repeat;
+    }
     position: relative;
     height: 667px;
     .top__slogan{
