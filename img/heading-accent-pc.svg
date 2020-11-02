@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="104" height="8" viewBox="0 0 104 8">
+  <g id="heading-accent1" transform="translate(18 1)">
+    <circle id="楕円形_1" data-name="楕円形 1" cx="4" cy="4" r="4" transform="translate(-18 -1)" fill="#e04285"/>
+    <circle id="楕円形_2" data-name="楕円形 2" cx="4" cy="4" r="4" transform="translate(14 -1)" fill="#ffbf01"/>
+    <circle id="楕円形_3" data-name="楕円形 3" cx="4" cy="4" r="4" transform="translate(46 -1)" fill="#006b3d"/>
+    <circle id="楕円形_4" data-name="楕円形 4" cx="4" cy="4" r="4" transform="translate(78 -1)" fill="#fc8b03"/>
+  </g>
+</svg>

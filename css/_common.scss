@@ -4,12 +4,22 @@
     padding-top :3.75rem;
     padding-bottom: 2.5rem;
     margin: 0 auto; 
+    @include pc{
+        max-width: 1000px;
+        padding-top: 6rem;
+        padding-bottom: 4rem;
+    }
     .section__heading{
         text-align: center;
         font-size: 24px;
         margin-bottom: 1.5rem;
         position: relative;
-        height: 50px;
+        padding-bottom: 1rem;
+        @include pc{
+            font-size: 40px;
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+        }
     }
     .section__heading::after{
         content: url(../img/heading-accent.svg);
@@ -18,15 +28,26 @@
         top: 40%;
         left: 50%;
         transform: translateX(-50%);
+        @include pc{
+            content: url(../img/heading-accent-pc.svg);
+        }
     }
     .section__list{
         display: flex;
         flex-direction: column;
         align-items: center;
+        @include pc{
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
         .section__list__item{
-            width: 300px;
+            width: 100%;
             box-sizing: border-box;
             margin-bottom: 1.5rem;
+            @include pc{
+                margin: 0 1rem;
+            }
         }
         .section__list__item:last-child{
             margin-bottom: 0;
@@ -40,6 +61,7 @@
     }
 }
 
+
 // header
 #header{
     position: fixed;
@@ -52,15 +74,40 @@
         justify-content: space-between;
         align-items: center;
         height: 80px;
-        padding: 0 1rem;
+        padding: $top-padding--sp;
+        @include pc{
+            height: 112px;
+            padding: $top-padding--pc;
+        }
         .header-contents__logo{
             img{
                 height: 36px;
+                @include pc{
+                    height: 48px;
+                }
             }
         }
         .header-contents__menu-btn{
+            display: block;
+            @include pc{
+                display: none;
+            }
             img{
                 height: 32px;
+            }
+        }
+        .header-contents__nav{
+            display: none;
+            @include pc{
+                display: flex;
+            }
+            .header-contents__nav__nav-item{
+                padding-left: 2rem;
+                text-shadow: 0px 3px 6px rgba(0,0,0,0.4);
+                a{
+                    font-weight: bold;
+                    color: #fff;
+                }
             }
         }
     }
@@ -83,6 +130,9 @@
         justify-content: center;
         font-size: 10px;
         margin-bottom: 1rem;
+        @include pc{
+            font-size: 12px;
+        }
         .footer__nav__item{
             padding: 0 0.5rem;
             border-right: $border;
@@ -97,5 +147,8 @@
     .footer__copyright{
         font-size: 8px;
         color: #c1c1c1;
+        @include pc{
+            font-size: 10px;
+        }
     }
 }

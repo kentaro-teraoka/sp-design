@@ -1,6 +1,8 @@
 // 変数
 $text-color: #535353;
 $border: 1px solid #c1c1c1;
+$top-padding--sp: 0 1rem;
+$top-padding--pc: 0 6rem;
 
 // default
 body{
@@ -8,14 +10,18 @@ body{
     background: #f8f8f8;
     color: $text-color;
     margin: 0;
+    font-size: 16px;
+    @include pc{
+        font-size: 18px;
+    }
 }
 h1, h2, h3, h4 ,h5 ,h6{
     margin: 0;
 }
 p{
-    font-size: 16px;
     line-height: 1.75;
     margin: 0;
+    
 }
 a{
     color: $text-color;

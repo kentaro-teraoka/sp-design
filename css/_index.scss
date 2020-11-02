@@ -10,8 +10,12 @@
     }
     position: relative;
     height: 667px;
+    padding: $top-padding--sp;
+    @include pc{
+        height: 800px;
+        padding: $top-padding--pc;
+    }
     .top__slogan{
-        padding-left: 1rem;
         z-index: 9;
         img{
             width: 305px;
@@ -53,9 +57,12 @@
         .price__list__item{
             text-align: center;
             h3{
-                font-size: 1.25rem;
+                font-size: 20px;
                 font-weight: normal;
                 margin-bottom: 1rem;
+                @include pc{
+                    font-size: 26px;
+                }
             }
             .price__list__item__price-data{
                 border-bottom: 1px solid #c1c1c1;
@@ -65,9 +72,15 @@
                     font-weight: bold;
                     .yen{
                         font-size: 32px;
+                        @include pc{
+                            font-size: 40px;
+                        }
                     }
                     .num{
                         font-size: 40px;
+                        @include pc{
+                            font-size: 56px;
+                        }
                     }
                     .num.basic{
                         color: #06A561;
@@ -96,7 +109,12 @@
 // question
 #question{
     .question__list{
+        flex-wrap: wrap;
         .question__list__item{
+            @include pc{
+                width: 46%;
+                margin: 1rem;
+            }
             .question__list__item__question-text{
                 display: flex;
                 justify-content: space-between;
@@ -104,7 +122,10 @@
                 padding-bottom: 1.5rem;
                 margin-bottom: 1rem;
                 h3{
-                    font-size: 1.25rem;
+                    font-size: 20px;
+                    @include pc{
+                        font-size: 26px;
+                    }
                 }
             }
         }
@@ -114,12 +135,20 @@
 // contact
 #contact{
     .contact__form{
+        max-width: 475px;
+        margin: 0 auto;
         .contact__form__form-item{
             margin-bottom: 1rem;
+            @include pc{
+                margin-bottom: 1.25rem;
+            }
             label{
                 display: block;
                 font-size: 16px;
                 margin-bottom: 0.5rem;
+                @include pc{
+                    font-size: 18px;
+                }
             }
             input{
                 height: 40px;
@@ -142,6 +171,9 @@
                 border-radius: 8px;
                 width: auto;
                 padding: 1rem 2.5rem;
+                @include pc{
+                    font-size: 18px;
+                }
             }
         }
         .contact__form__form-item:last-child{
