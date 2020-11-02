@@ -45,9 +45,6 @@
             width: 100%;
             box-sizing: border-box;
             margin-bottom: 1.5rem;
-            @include pc{
-                margin: 0 1rem;
-            }
         }
         .section__list__item:last-child{
             margin-bottom: 0;

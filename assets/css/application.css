@@ -3,6 +3,13 @@ body {
   background: #f8f8f8;
   color: #535353;
   margin: 0;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    font-size: 18px;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -10,7 +17,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  font-size: 16px;
   line-height: 1.75;
   margin: 0;
 }
@@ -42,12 +48,28 @@ button:focus {
   margin: 0 auto;
 }
 
+@media screen and (min-width: 1000px) {
+  .contents-section {
+    max-width: 1000px;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+  }
+}
+
 .contents-section .section__heading {
   text-align: center;
   font-size: 24px;
   margin-bottom: 1.5rem;
   position: relative;
-  height: 50px;
+  padding-bottom: 1rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .contents-section .section__heading {
+    font-size: 40px;
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+  }
 }
 
 .contents-section .section__heading::after {
@@ -58,6 +80,12 @@ button:focus {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+@media screen and (min-width: 1000px) {
+  .contents-section .section__heading::after {
+    content: url(../img/heading-accent-pc.svg);
+  }
 }
 
 .contents-section .section__list {
@@ -73,8 +101,23 @@ button:focus {
           align-items: center;
 }
 
+@media screen and (min-width: 1000px) {
+  .contents-section .section__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
 .contents-section .section__list .section__list__item {
-  width: 300px;
+  width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin-bottom: 1.5rem;
@@ -114,12 +157,57 @@ button:focus {
   padding: 0 1rem;
 }
 
+@media screen and (min-width: 1000px) {
+  #header .header-contents {
+    height: 112px;
+    padding: 0 6rem;
+  }
+}
+
 #header .header-contents .header-contents__logo img {
   height: 36px;
 }
 
+@media screen and (min-width: 1000px) {
+  #header .header-contents .header-contents__logo img {
+    height: 48px;
+  }
+}
+
+#header .header-contents .header-contents__menu-btn {
+  display: block;
+}
+
+@media screen and (min-width: 1000px) {
+  #header .header-contents .header-contents__menu-btn {
+    display: none;
+  }
+}
+
 #header .header-contents .header-contents__menu-btn img {
   height: 32px;
+}
+
+#header .header-contents .header-contents__nav {
+  display: none;
+}
+
+@media screen and (min-width: 1000px) {
+  #header .header-contents .header-contents__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+#header .header-contents .header-contents__nav .header-contents__nav__nav-item {
+  padding-left: 2rem;
+  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+#header .header-contents .header-contents__nav .header-contents__nav__nav-item a {
+  font-weight: bold;
+  color: #fff;
 }
 
 #footer {
@@ -148,6 +236,12 @@ button:focus {
   margin-bottom: 1rem;
 }
 
+@media screen and (min-width: 1000px) {
+  #footer .footer__nav {
+    font-size: 12px;
+  }
+}
+
 #footer .footer__nav .footer__nav__item {
   padding: 0 0.5rem;
   border-right: 1px solid #c1c1c1;
@@ -166,6 +260,12 @@ button:focus {
   color: #c1c1c1;
 }
 
+@media screen and (min-width: 1000px) {
+  #footer .footer__copyright {
+    font-size: 10px;
+  }
+}
+
 #top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -179,10 +279,17 @@ button:focus {
   background-repeat: no-repeat;
   position: relative;
   height: 667px;
+  padding: 0 1rem;
+}
+
+@media screen and (min-width: 1000px) {
+  #top {
+    height: 800px;
+    padding: 0 6rem;
+  }
 }
 
 #top .top__slogan {
-  padding-left: 1rem;
   z-index: 9;
 }
 
@@ -201,6 +308,12 @@ button:focus {
   z-index: 8;
 }
 
+@media screen and (min-width: 1000px) {
+  #feature .feature__list .feature__list__item {
+    width: calc(33% - 25px);
+  }
+}
+
 #feature .feature__list .feature__list__item img {
   width: 100%;
 }
@@ -214,10 +327,22 @@ button:focus {
   text-align: center;
 }
 
+@media screen and (min-width: 1000px) {
+  #price .price__list .price__list__item {
+    width: calc(50% - 25px);
+  }
+}
+
 #price .price__list .price__list__item h3 {
-  font-size: 1.25rem;
+  font-size: 20px;
   font-weight: normal;
   margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1000px) {
+  #price .price__list .price__list__item h3 {
+    font-size: 26px;
+  }
 }
 
 #price .price__list .price__list__item .price__list__item__price-data {
@@ -234,8 +359,20 @@ button:focus {
   font-size: 32px;
 }
 
+@media screen and (min-width: 1000px) {
+  #price .price__list .price__list__item .price__list__item__price-data p .yen {
+    font-size: 40px;
+  }
+}
+
 #price .price__list .price__list__item .price__list__item__price-data p .num {
   font-size: 40px;
+}
+
+@media screen and (min-width: 1000px) {
+  #price .price__list .price__list__item .price__list__item__price-data p .num {
+    font-size: 56px;
+  }
 }
 
 #price .price__list .price__list__item .price__list__item__price-data p .num.basic {
@@ -264,6 +401,17 @@ button:focus {
   margin-bottom: 0;
 }
 
+#question .question__list {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (min-width: 1000px) {
+  #question .question__list .question__list__item {
+    width: calc(50% - 25px);
+  }
+}
+
 #question .question__list .question__list__item .question__list__item__question-text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -277,17 +425,40 @@ button:focus {
 }
 
 #question .question__list .question__list__item .question__list__item__question-text h3 {
-  font-size: 1.25rem;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 1000px) {
+  #question .question__list .question__list__item .question__list__item__question-text h3 {
+    font-size: 26px;
+  }
+}
+
+#contact .contact__form {
+  max-width: 475px;
+  margin: 0 auto;
 }
 
 #contact .contact__form .contact__form__form-item {
   margin-bottom: 1rem;
 }
 
+@media screen and (min-width: 1000px) {
+  #contact .contact__form .contact__form__form-item {
+    margin-bottom: 1.25rem;
+  }
+}
+
 #contact .contact__form .contact__form__form-item label {
   display: block;
   font-size: 16px;
   margin-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 1000px) {
+  #contact .contact__form .contact__form__form-item label {
+    font-size: 18px;
+  }
 }
 
 #contact .contact__form .contact__form__form-item input {
@@ -316,6 +487,12 @@ button:focus {
   padding: 1rem 2.5rem;
 }
 
+@media screen and (min-width: 1000px) {
+  #contact .contact__form .contact__form__form-item .send-btn {
+    font-size: 18px;
+  }
+}
+
 #contact .contact__form .contact__form__form-item:last-child {
   margin: 0;
 }
@@ -323,4 +500,4 @@ button:focus {
 #contact .contact__form .contact__form__form-item.text-center {
   text-align: center;
 }
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=application.css.map */
