@@ -1,10 +1,17 @@
 // 変数
 $text-color: #535353;
 $border: 1px solid #c1c1c1;
+$sp-font-size--default: 16px;
+$pc-font-size--default: 18px;
+$sp-font-size--h2: 24px;
+$pc-font-size--h2: 40px;
+$sp-font-size--h3: 20px;
+$pc-font-size--h3: 26px;
 
 // default
 body{
-    font-family: 'TsukuARdGothic-Regular',sans-serif;
+    // font-family: 'TsukuARdGothic-Regular',sans-serif;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
     background: #f8f8f8;
     color: $text-color;
     margin: 0;
@@ -13,7 +20,7 @@ h1, h2, h3, h4 ,h5 ,h6{
     margin: 0;
 }
 p{
-    font-size: 16px;
+    font-size: $sp-font-size--default;
     line-height: 1.75;
     margin: 0;
 }
