@@ -91,7 +91,7 @@ button:focus {
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 }
 
-#header {
+.header {
   position: fixed;
   left: 0;
   top: 0;
@@ -99,7 +99,7 @@ button:focus {
   z-index: 20;
 }
 
-#header .header-contents {
+.header .header-contents {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -113,29 +113,29 @@ button:focus {
   padding: 0 1rem;
 }
 
-#header .header-contents__logo img {
+.header .header-contents__logo img {
   height: 36px;
 }
 
-#header .header-contents__menu-btn img {
+.header .header-contents__menu-btn img {
   height: 32px;
 }
 
-#footer {
+.footer {
   background: #006b3d;
   text-align: center;
   padding: 3.75rem 0 2.5rem;
 }
 
-#footer .footer__logo {
+.footer .footer__logo {
   margin-bottom: 1.5rem;
 }
 
-#footer .footer__logo img {
+.footer .footer__logo img {
   width: 97px;
 }
 
-#footer .footer__nav {
+.footer .footer__nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -146,25 +146,25 @@ button:focus {
   margin-bottom: 1rem;
 }
 
-#footer .footer__nav__item {
+.footer .footer__nav__item {
   padding: 0 0.5rem;
   border-right: 1px solid #c1c1c1;
 }
 
-#footer .footer__nav__item a {
+.footer .footer__nav__item a {
   color: #f8f8f8;
 }
 
-#footer .footer__nav__item:last-child {
+.footer .footer__nav__item:last-child {
   border-right: none;
 }
 
-#footer .footer__copyright {
+.footer .footer__copyright {
   font-size: 8px;
   color: #c1c1c1;
 }
 
-#top {
+.top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -179,16 +179,16 @@ button:focus {
   height: 100vh;
 }
 
-#top .top__slogan {
+.top .top__slogan {
   padding-left: 1rem;
   z-index: 10;
 }
 
-#top .top__slogan img {
+.top .top__slogan img {
   width: 305px;
 }
 
-#top::after {
+.top::after {
   content: "";
   position: absolute;
   top: 0;
