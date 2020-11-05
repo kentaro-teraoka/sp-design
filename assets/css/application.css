@@ -75,10 +75,10 @@ button:focus {
   content: url(../img/heading-accent.svg);
   display: block;
   position: absolute;
-  top: 40%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 1000px) {
@@ -253,7 +253,9 @@ button:focus {
 }
 
 .footer__copyright {
-  font-size: 8px;
+  font-size: 10px;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
   color: #c1c1c1;
 }
 
@@ -338,40 +340,40 @@ button:focus {
   }
 }
 
-.price__list__item .price__list__item__monthly {
+.price__list__item__monthly {
   border-bottom: 1px solid #c1c1c1;
   padding-bottom: 0.75rem;
 }
 
-.price__list__item .price__list__item__monthly p {
+.price__list__item__monthly p {
   font-weight: bold;
 }
 
-.price__list__item .price__list__item__monthly p .yen {
+.price__list__item__monthly p .yen {
   font-size: 2rem;
 }
 
 @media screen and (min-width: 1000px) {
-  .price__list__item .price__list__item__monthly p .yen {
+  .price__list__item__monthly p .yen {
     font-size: 2.5rem;
   }
 }
 
-.price__list__item .price__list__item__monthly p .num {
+.price__list__item__monthly p .num {
   font-size: 2.5rem;
 }
 
 @media screen and (min-width: 1000px) {
-  .price__list__item .price__list__item__monthly p .num {
+  .price__list__item__monthly p .num {
     font-size: 3.5rem;
   }
 }
 
-.price__list__item .price__list__item__monthly p .num.basic {
+.price__list__item__monthly p .num.basic {
   color: #06a561;
 }
 
-.price__list__item .price__list__item__monthly p .num.premium {
+.price__list__item__monthly p .num.premium {
   color: #067aa5;
 }
 
@@ -383,6 +385,7 @@ button:focus {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0.75rem 1rem 0;
+  margin: 0;
 }
 
 .price__list__item__text:not(:last-child) {
