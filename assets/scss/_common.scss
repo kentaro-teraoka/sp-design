@@ -1,8 +1,7 @@
 // common
 .contents-section{
     max-width: 300px;
-    padding-top :3.75rem;
-    padding-bottom: 2.5rem;
+    padding: 3.75rem 0 2.5rem;
     margin: 0 auto; 
     @include pc{
         max-width: 1000px;
@@ -11,25 +10,24 @@
     }
     .section__heading{
         text-align: center;
-        font-size: 24px;
+        font-size: $sp-font-size--h2;
         margin-bottom: 1.5rem;
         position: relative;
-        padding-bottom: 1rem;
         @include pc{
-            font-size: 40px;
+            font-size: $pc-font-size--h2;
             margin-bottom: 3rem;
             padding-bottom: 1.5rem;
         }
-    }
-    .section__heading::after{
-        content: url(../img/heading-accent.svg);
-        display: block;
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translateX(-50%);
-        @include pc{
-            content: url(../img/heading-accent-pc.svg);
+        &::after{
+            content: url(../img/heading-accent.svg);
+            display: block;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translateX(-50%);
+            @include pc{
+                content: url(../img/heading-accent-pc.svg);
+            }
         }
     }
     .section__list{
@@ -41,31 +39,31 @@
             justify-content: space-between;
             align-items: flex-start;
         }
-        .section__list__item{
+        &__item{
             width: 100%;
             box-sizing: border-box;
             margin-bottom: 1.5rem;
-        }
-        .section__list__item:last-child{
-            margin-bottom: 0;
-        }
-        .section__list__item.radius-shadow{
-            background: #fff;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+            &:last-child{
+                margin-bottom: 0;
+            }
+            &.radius-shadow{
+                background: #fff;
+                padding: 1.5rem;
+                border-radius: 8px;
+                box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+            }
         }
     }
 }
 
 
 // header
-#header{
+.header{
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
-    z-index: 10;
+    z-index: 20;
     .header-contents{
         display: flex;
         justify-content: space-between;
@@ -76,7 +74,7 @@
             height: 112px;
             padding: $top-padding--pc;
         }
-        .header-contents__logo{
+        &__logo{
             img{
                 height: 36px;
                 @include pc{
@@ -84,7 +82,7 @@
                 }
             }
         }
-        .header-contents__menu-btn{
+        &__menu-btn{
             display: block;
             @include pc{
                 display: none;
@@ -93,12 +91,12 @@
                 height: 32px;
             }
         }
-        .header-contents__nav{
+        &__nav{
             display: none;
             @include pc{
                 display: flex;
             }
-            .header-contents__nav__nav-item{
+            &__nav-item{
                 padding-left: 2rem;
                 text-shadow: 0px 3px 6px rgba(0,0,0,0.4);
                 a{
@@ -111,18 +109,17 @@
 }
 
 // footer
-#footer{
-    background: #006B3D;
+.footer{
+    background: #006b3d;
     text-align: center;
-    padding-top : 3.75rem;
-    padding-bottom: 2.5rem;
-    .footer__logo{
+    padding: 3.75rem 0 2.5rem;
+    &__logo{
         margin-bottom: 1.5rem;
         img{
             width: 97px;
         }
     }
-    .footer__nav{
+    &__nav{
         display: flex;
         justify-content: center;
         font-size: 10px;
@@ -130,18 +127,18 @@
         @include pc{
             font-size: 12px;
         }
-        .footer__nav__item{
+        &__item{
             padding: 0 0.5rem;
             border-right: $border;
             a{
                 color: #f8f8f8;
             }
-        }
-        .footer__nav__item:last-child{
-            border-right: none;
+            &:last-child{
+                border-right: none;
+            }
         }
     }
-    .footer__copyright{
+    &__copyright{
         font-size: 8px;
         color: #c1c1c1;
         @include pc{
