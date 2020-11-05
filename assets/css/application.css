@@ -258,12 +258,12 @@ button:focus {
   color: #c1c1c1;
 }
 
+
 @media screen and (min-width: 1000px) {
   .footer__copyright {
     font-size: 10px;
   }
 }
-
 .top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -325,7 +325,7 @@ button:focus {
     width: calc(50% - 25px);
   }
 }
-
+  
 .price__list__item h3 {
   font-size: 20px;
   font-weight: normal;
@@ -337,7 +337,6 @@ button:focus {
     font-size: 26px;
   }
 }
-
 .price__list__item__monthly {
   border-bottom: 1px solid #c1c1c1;
   padding-bottom: 0.75rem;
@@ -366,7 +365,6 @@ button:focus {
     font-size: 3.5rem;
   }
 }
-
 .price__list__item__monthly p .num.basic {
   color: #06a561;
 }
