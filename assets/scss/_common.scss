@@ -41,12 +41,7 @@
             align-items: flex-start;
         }
         &__item{
-            // width: 100%;
             box-sizing: border-box;
-            margin-bottom: 1.5rem;
-            &:last-child{
-                margin-bottom: 0;
-            }
             &.radius-shadow{
                 background: #fff;
                 padding: 1.5rem;
@@ -59,7 +54,7 @@
 
 // header
 .header{
-    position: fixed;
+    position: absolute;
     left: 0;
     top: 0;
     width: 100%;
@@ -170,7 +165,7 @@
     &__copyright{
         font-size: 10px;
         transform: scale(0.8);
-        color: #c1c1c1;
+        color: $color-gray;
         @include pc{
             font-size: 10px;
         }

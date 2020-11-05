@@ -13,7 +13,7 @@
             <div class="header-contents__logo">
                 <a href="#"><img src="assets/img/logo-wt.svg" alt="LOGO"></a>
             </div>
-            <div id="menuBtn" class="header-contents__menu-btn">
+            <div class="header-contents__menu-btn">
                 <img src="assets/img/menu_icon.svg" alt="menu">
             </div>
             <ul class="header-contents__sp-nav">
@@ -49,7 +49,7 @@
     <section class="top">
         <h1 class="top__slogan"><img src="assets/img/top_slogan-text.svg" alt="爬虫類たちを君の手に。"></h1>
     </section>
-    <section class="contents-section">
+    <section id="feature" class="contents-section">
         <h2 class="section__heading">サービスの特徴</h2>
         <ul class="section__list feature__list">
             <li class="section__list__item feature__list__item">
@@ -72,10 +72,14 @@
             </li>
         </ul>
     </section>
-    <section class="contents-section">
+    <section id="price" class="contents-section">
         <h2 class="section__heading">ご利用料金</h2>
+        <ul class="switch-tab">
+            <li class="switch-tab__item active">ベーシック</li>
+            <li class="switch-tab__item">プレミアム</li>
+        </ul>
         <ul class="section__list price__list">
-            <li class="section__list__item price__list__item radius-shadow">
+            <li class="section__list__item price__list__item radius-shadow show">
                 <h3>ベーシックプラン</h3>
                 <div class="price__list__item__monthly">
                     <p>
@@ -109,7 +113,7 @@
             </li>
         </ul>
     </section>
-    <section class="contents-section">
+    <section id="question" class="contents-section">
         <h2 class="section__heading">よくある質問</h2>
         <ul class="section__list question__list">
             <li class="section__list__item question__list__item radius-shadow">
@@ -150,7 +154,7 @@
             </li>
         </ul>
     </section>
-    <section class="contents-section">
+    <section id="contact" class="contents-section">
         <h2 class="section__heading">お問い合わせ</h2>
         <form action="" class="contact__form">
             <div class="contact__form__item">
