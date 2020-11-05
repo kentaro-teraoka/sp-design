@@ -68,12 +68,12 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 80px;
-        padding: $top-padding-sp;
+        height: $sp-header-height;
+        padding: $sp-top-padding;
         position: relative;
         @include pc{
-            height: 112px;
-            padding: $top-padding-pc;
+            height: $pc-header-height;
+            padding: $pc-top-padding;
         }
         &__logo{
             z-index: 50;
@@ -95,14 +95,17 @@
             }
         }
         &__sp-nav{
-            display: none;
             position: absolute;
-            top: 0;
+            bottom: calc(0px + #{$sp-header-height}); //アニメーション実装のためのもの
             left: 0;
             background: rgba(0,107,61, 0.8);
             width: 100%;
             padding: 104px 0 64px;
             z-index: 30;
+            // transition: all 300ms 0s ease;
+            @include pc{
+                bottom: calc(0px + #{$pc-header-height});
+            }
             &__nav-item{
                 text-align: center;
                 font-size: 1.5rem;
@@ -118,9 +121,14 @@
                 }
             }
         }
-        &__sp-nav.open{
-            display: block;
+        &__sp-nav:hover{
+            top: 0;
+            bottom: auto; //画面上部に隠れてたnavを降ろす
         }
+        // &__sp-nav.open{
+        //     top: 0;
+        //     bottom: auto;
+        // }
         &__pc-nav{
             display: none;
             @include pc{
