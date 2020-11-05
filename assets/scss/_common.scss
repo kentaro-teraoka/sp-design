@@ -10,11 +10,11 @@
     }
     .section__heading{
         text-align: center;
-        font-size: $sp-font-size--h2;
+        font-size: $sp-font-size-h2;
         margin-bottom: 1.5rem;
         position: relative;
         @include pc{
-            font-size: $pc-font-size--h2;
+            font-size: $pc-font-size-h2;
             margin-bottom: 3rem;
             padding-bottom: 1.5rem;
         }
@@ -22,9 +22,10 @@
             content: url(../img/heading-accent.svg);
             display: block;
             position: absolute;
-            top: 40%;
-            left: 50%;
-            transform: translateX(-50%);
+            top: 50%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
             @include pc{
                 content: url(../img/heading-accent-pc.svg);
             }
@@ -40,7 +41,7 @@
             align-items: flex-start;
         }
         &__item{
-            width: 100%;
+            // width: 100%;
             box-sizing: border-box;
             margin-bottom: 1.5rem;
             &:last-child{
@@ -68,10 +69,10 @@
         justify-content: space-between;
         align-items: center;
         height: 80px;
-        padding: $top-padding--sp;
+        padding: $top-padding-sp;
         @include pc{
             height: 112px;
-            padding: $top-padding--pc;
+            padding: $top-padding-pc;
         }
         &__logo{
             img{
@@ -138,7 +139,8 @@
         }
     }
     &__copyright{
-        font-size: 8px;
+        font-size: 10px;
+        transform: scale(0.8);
         color: #c1c1c1;
         @include pc{
             font-size: 10px;

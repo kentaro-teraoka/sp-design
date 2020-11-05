@@ -1,16 +1,16 @@
 // 変数
 $text-color: #535353;
 $border: 1px solid #c1c1c1;
-$top-padding--sp: 0 1rem;
-$top-padding--pc: 0 6rem;
+$top-padding-sp: 0 1rem;
+$top-padding-pc: 0 6rem;
 $sp-2column: calc(50% - 25px);
 $sp-3column: calc(33% - 25px);
-$sp-font-size--default: 16px;
-$pc-font-size--default: 18px;
-$sp-font-size--h2: 24px;
-$pc-font-size--h2: 40px;
-$sp-font-size--h3: 20px;
-$pc-font-size--h3: 26px;
+$sp-font-size-default: 16px;
+$pc-font-size-default: 18px;
+$sp-font-size-h2: 24px;
+$pc-font-size-h2: 40px;
+$sp-font-size-h3: 20px;
+$pc-font-size-h3: 26px;
 
 // default
 body{
@@ -28,7 +28,7 @@ h1, h2, h3, h4 ,h5 ,h6{
     margin: 0;
 }
 p{
-    font-size: $sp-font-size--default;
+    font-size: $sp-font-size-default;
     line-height: 1.75;
     margin: 0;
 }

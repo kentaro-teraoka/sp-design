@@ -10,9 +10,9 @@
     }
     position: relative;
     height: 100vh;
-    padding: $top-padding--sp;
+    padding: $top-padding-sp;
     @include pc{
-        padding: $top-padding--pc;
+        padding: $top-padding-pc;
     }
     &__slogan{
         z-index: 10;
@@ -49,18 +49,19 @@
 // price
 .price__list__item{
     text-align: center;
+    width: 100%;
     @include pc{
         width: $sp-2column;
     }
     h3{
-        font-size: $sp-font-size--h3;
+        font-size: $sp-font-size-h3;
         font-weight: normal;
         margin-bottom: 1rem;
         @include pc{
-            font-size: $pc-font-size--h3;
+            font-size: $pc-font-size-h3;
         }
     }
-    &__monthly{
+    .&__monthly{
         border-bottom: $border;
         padding-bottom: 0.75rem;
         p{
@@ -108,9 +109,9 @@
             justify-content: space-between;
             padding-bottom: 1.5rem;
             h3{
-                font-size: $sp-font-size--h3;
+                font-size: $sp-font-size-h3;
                 @include pc{
-                    font-size: $pc-font-size--h3;
+                    font-size: $pc-font-size-h3;
                 }
             }
         }
@@ -126,17 +127,17 @@
 .contact__form{
     max-width: 475px;
     margin: 0 auto;
-    .contact__form__form-item{
+    .contact__form__item{
         margin-bottom: 1rem;
         @include pc{
             margin-bottom: 1.25rem;
         }
         label{
             display: block;
-            font-size: $sp-font-size--default;
+            font-size: $sp-font-size-default;
             margin-bottom: 0.5rem;
             @include pc{
-                font-size: $pc-font-size--default;
+                font-size: $pc-font-size-default;
             }
         }
         input{
@@ -147,13 +148,13 @@
             border: $border;
             border-radius: 8px;
             box-sizing: border-box;
-            font-size: $sp-font-size--default;
+            font-size: $sp-font-size-default;
             text-indent: 8px;
             color: $text-color;
         }
         .btn-brand{
             font-weight: bold;
-            font-size: $sp-font-size--default;
+            font-size: $sp-font-size-default;
             color: #fff;
             background: #fb607e;
             border: none;
@@ -161,7 +162,7 @@
             width: auto;
             padding: 1rem 2.5rem;
             @include pc{
-                font-size: $pc-font-size--default;
+                font-size: $pc-font-size-default;
             }
         }
         &:last-child{

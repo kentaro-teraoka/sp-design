@@ -116,7 +116,6 @@ button:focus {
 }
 
 .contents-section .section__list__item {
-  width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin-bottom: 1.5rem;
@@ -258,12 +257,12 @@ button:focus {
   color: #c1c1c1;
 }
 
-
 @media screen and (min-width: 1000px) {
   .footer__copyright {
     font-size: 10px;
   }
 }
+
 .top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -318,6 +317,7 @@ button:focus {
 
 .price__list__item {
   text-align: center;
+  width: 100%;
 }
 
 @media screen and (min-width: 1000px) {
@@ -325,7 +325,7 @@ button:focus {
     width: calc(50% - 25px);
   }
 }
-  
+
 .price__list__item h3 {
   font-size: 20px;
   font-weight: normal;
@@ -337,39 +337,41 @@ button:focus {
     font-size: 26px;
   }
 }
-.price__list__item__monthly {
+
+.price__list__item .price__list__item__monthly {
   border-bottom: 1px solid #c1c1c1;
   padding-bottom: 0.75rem;
 }
 
-.price__list__item__monthly p {
+.price__list__item .price__list__item__monthly p {
   font-weight: bold;
 }
 
-.price__list__item__monthly p .yen {
+.price__list__item .price__list__item__monthly p .yen {
   font-size: 2rem;
 }
 
 @media screen and (min-width: 1000px) {
-  .price__list__item__monthly p .yen {
+  .price__list__item .price__list__item__monthly p .yen {
     font-size: 2.5rem;
   }
 }
 
-.price__list__item__monthly p .num {
+.price__list__item .price__list__item__monthly p .num {
   font-size: 2.5rem;
 }
 
 @media screen and (min-width: 1000px) {
-  .price__list__item__monthly p .num {
+  .price__list__item .price__list__item__monthly p .num {
     font-size: 3.5rem;
   }
 }
-.price__list__item__monthly p .num.basic {
+
+.price__list__item .price__list__item__monthly p .num.basic {
   color: #06a561;
 }
 
-.price__list__item__monthly p .num.premium {
+.price__list__item .price__list__item__monthly p .num.premium {
   color: #067aa5;
 }
 
@@ -429,33 +431,33 @@ button:focus {
   margin: 0 auto;
 }
 
-.contact__form .contact__form__form-item {
+.contact__form .contact__form__item {
   margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 1000px) {
-  .contact__form .contact__form__form-item {
+  .contact__form .contact__form__item {
     margin-bottom: 1.25rem;
   }
 }
 
-.contact__form .contact__form__form-item label {
+.contact__form .contact__form__item label {
   display: block;
   font-size: 16px;
   margin-bottom: 0.5rem;
 }
 
 @media screen and (min-width: 1000px) {
-  .contact__form .contact__form__form-item label {
+  .contact__form .contact__form__item label {
     font-size: 18px;
   }
 }
 
-.contact__form .contact__form__form-item input {
+.contact__form .contact__form__item input {
   height: 40px;
 }
 
-.contact__form .contact__form__form-item input, .contact__form .contact__form__form-item textarea {
+.contact__form .contact__form__item input, .contact__form .contact__form__item textarea {
   width: 100%;
   border: 1px solid #c1c1c1;
   border-radius: 8px;
@@ -466,7 +468,7 @@ button:focus {
   color: #535353;
 }
 
-.contact__form .contact__form__form-item .btn-brand {
+.contact__form .contact__form__item .btn-brand {
   font-weight: bold;
   font-size: 16px;
   color: #fff;
@@ -478,16 +480,16 @@ button:focus {
 }
 
 @media screen and (min-width: 1000px) {
-  .contact__form .contact__form__form-item .btn-brand {
+  .contact__form .contact__form__item .btn-brand {
     font-size: 18px;
   }
 }
 
-.contact__form .contact__form__form-item:last-child {
+.contact__form .contact__form__item:last-child {
   margin: 0;
 }
 
-.contact__form .contact__form__form-item.text-center {
+.contact__form .contact__form__item.text-center {
   text-align: center;
 }
 /*# sourceMappingURL=application.css.map */
