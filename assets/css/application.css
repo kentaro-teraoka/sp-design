@@ -1,5 +1,5 @@
 body {
-  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-family: 'TsukuARdGothic-Regular', 'M PLUS Rounded 1c', sans-serif;
   background: #f8f8f8;
   color: #535353;
   margin: 0;
@@ -380,7 +380,7 @@ button:focus {
 }
 
 .switch-tab__item.active {
-  background: #c1c1c1;
+  background: #006b3d;
   color: #fff;
 }
 
