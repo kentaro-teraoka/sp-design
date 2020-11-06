@@ -507,6 +507,11 @@ button:focus {
   }
 }
 
+.question__list .question__list__item .question-text img {
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
 .question__list .question__list__item .answer-text {
   display: none;
   padding-top: 1rem;
