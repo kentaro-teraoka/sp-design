@@ -135,6 +135,8 @@ button:focus {
   width: 100%;
   background: transparent;
   z-index: 20;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 .header .header-contents {

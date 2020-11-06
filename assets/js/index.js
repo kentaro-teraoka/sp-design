@@ -25,7 +25,6 @@ $(function(){
         $("body, html").animate({scrollTop: sectionPos}, 500);
         if(windowWidth < 1000){
             toggleNav();
-            console.log(windowWidth);
         }
     });
 
@@ -37,17 +36,25 @@ $(function(){
 
     // topを超えた時にheaderを追従させる
     $(window).scroll(function(){
+        let $header = $(".header");
         let scrollHeight = $(this).scrollTop();
+        let headerHeight = $header.height();
         let topHeight = $(".top").height();
-        if(scrollHeight >= topHeight){
-            $(".header").css({
+        if(scrollHeight > headerHeight && scrollHeight < topHeight){
+            $header.css({
+                top: 0 - headerHeight
+            });
+        }else if(scrollHeight >= topHeight){
+            $header.css({
                 position: "fixed",
-                background: "rgba(0,107,61, 0.8)"
+                background: "rgba(0,107,61, 0.8)",
+                top: 0
             });
         } else{
-            $(".header").css({
+            $header.css({
                 position: "absolute",
-                background: "transparent"
+                background: "transparent",
+                top: 0
             });
         }
     });

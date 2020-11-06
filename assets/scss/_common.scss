@@ -60,6 +60,7 @@
     width: 100%;
     background: transparent;
     z-index: 20;
+    transition: all 0.2s linear;
     .header-contents{
         display: flex;
         justify-content: space-between;
