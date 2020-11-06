@@ -74,11 +74,6 @@ $(function(){
         if(windowWidth < 1000){
             $(this).next().slideToggle(); //answer-textの開閉
             $(this).children("img").toggleClass("rotate");
-            if($(this).children("img").hasClass("rotate")){
-                $(this).children("img").css("transform", "rotate(-90deg)");
-            }else{
-                $(this).children("img").css("transform", "rotate(0deg)");
-            }
         }
         
     });

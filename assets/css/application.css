@@ -506,6 +506,8 @@ button:focus {
 }
 
 .question__list .question__list__item .question-text img {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
@@ -514,6 +516,11 @@ button:focus {
   .question__list .question__list__item .question-text img {
     display: none;
   }
+}
+
+.question__list .question__list__item .question-text img.rotate {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 .question__list .question__list__item .answer-text {

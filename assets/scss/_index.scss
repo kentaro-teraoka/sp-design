@@ -144,10 +144,14 @@
                 }
             }
             img{
+                transform: rotate(0deg);
                 transition: all 0.2s linear;
                 @include pc{
                     display: none;
                 }
+            }
+            img.rotate{
+                transform: rotate(-90deg);
             }
         }
         .answer-text{
