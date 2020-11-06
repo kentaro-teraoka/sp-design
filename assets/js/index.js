@@ -4,6 +4,11 @@ $(function(){
     // メニューボタンにopenクラスを付与
     $(".header-contents__menu-btn").click(function(){
         $(this).siblings(".header-contents__sp-nav").toggleClass("open");
+        if($(this).siblings(".header-contents__sp-nav").hasClass("open")){
+            $(this).children("img").attr("src", "assets/img/menu_icon_close.svg"); //openクラスついてたらバツボタン
+        }else{
+            $(this).children("img").attr("src", "assets/img/menu_icon.svg");　//openクラスついてなかったらメニューボタン
+        }
     });
 
     // topを超えた時にheaderを追従させる
