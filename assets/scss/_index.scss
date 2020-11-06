@@ -35,6 +35,7 @@
 
 // feature
 .feature__list__item{
+    @include list-margin;
     @include pc{
         width: $sp-3column;
     }
@@ -47,11 +48,34 @@
 }
 
 // price
+.switch-tab{
+    display: flex;
+    margin-bottom: 1.5rem;
+    &__item{
+        text-align: center;
+        background: transparent;
+        border: 1px solid $text-color;
+        padding: 1rem 0;
+        width: 50%;
+        &:first-child{
+            border-radius: 8px 0 0 8px;
+        }
+        &:last-child{
+            border-radius: 0 8px 8px 0;
+        }
+    }
+    &__item.active{
+        background: #006b3d;
+        color: #fff;
+    }
+}
 .price__list__item{
+    display: none;
     text-align: center;
+    margin: 0 auto;
     width: 100%;
     @include pc{
-        width: $sp-2column;
+        width: 50%;
     }
     h3{
         font-size: $sp-font-size-h3;
@@ -97,28 +121,47 @@
         }
     }
 }
+.price__list__item.show{
+    display: block;
+}
 
 // question
 .question__list{
     flex-wrap: wrap;
     .question__list__item{
+        @include list-margin;
+        width: 100%;
         @include pc{
             width: $sp-2column;
         }
         .question-text{
             display: flex;
             justify-content: space-between;
-            padding-bottom: 1.5rem;
             h3{
                 font-size: $sp-font-size-h3;
                 @include pc{
                     font-size: $pc-font-size-h3;
                 }
             }
+            img{
+                transform: rotate(0deg);
+                transition: all 0.2s linear;
+                @include pc{
+                    display: none;
+                }
+            }
+            img.rotate{
+                transform: rotate(-90deg);
+            }
         }
         .answer-text{
+            display: none;
             padding-top: 1rem;
+            margin-top: 1.5rem;
             border-top: $border;
+            @include pc{
+                display: block;
+            }
         }
     }
 }

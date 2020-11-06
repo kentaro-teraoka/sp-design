@@ -41,12 +41,7 @@
             align-items: flex-start;
         }
         &__item{
-            // width: 100%;
             box-sizing: border-box;
-            margin-bottom: 1.5rem;
-            &:last-child{
-                margin-bottom: 0;
-            }
             &.radius-shadow{
                 background: #fff;
                 padding: 1.5rem;
@@ -59,20 +54,22 @@
 
 // header
 .header{
-    position: fixed;
+    position: absolute;
     left: 0;
     top: 0;
     width: 100%;
+    background: transparent;
     z-index: 20;
+    transition: all 0.2s linear;
     .header-contents{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: $sp-header-height;
+        height: 80px;
         padding: $sp-top-padding;
         position: relative;
         @include pc{
-            height: $pc-header-height;
+            height: 112px;
             padding: $pc-top-padding;
         }
         &__logo{
@@ -121,14 +118,6 @@
                 }
             }
         }
-        &__sp-nav:hover{
-            top: 0;
-            bottom: auto; //画面上部に隠れてたnavを降ろす
-        }
-        // &__sp-nav.open{
-        //     top: 0;
-        //     bottom: auto;
-        // }
         &__pc-nav{
             display: none;
             @include pc{

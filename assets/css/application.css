@@ -1,5 +1,5 @@
 body {
-  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-family: 'TsukuARdGothic-Regular', 'M PLUS Rounded 1c', sans-serif;
   background: #f8f8f8;
   color: #535353;
   margin: 0;
@@ -118,11 +118,6 @@ button:focus {
 .contents-section .section__list__item {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-bottom: 1.5rem;
-}
-
-.contents-section .section__list__item:last-child {
-  margin-bottom: 0;
 }
 
 .contents-section .section__list__item.radius-shadow {
@@ -134,11 +129,14 @@ button:focus {
 }
 
 .header {
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   width: 100%;
+  background: transparent;
   z-index: 20;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 .header .header-contents {
@@ -225,10 +223,6 @@ button:focus {
   color: #fff;
 }
 
-.header .header-contents__sp-nav:hover {
-  top: 0;
-  bottom: auto;
-}
 
 .header .header-contents__pc-nav {
   display: none;
@@ -349,6 +343,14 @@ button:focus {
   z-index: 0;
 }
 
+.feature__list__item {
+  margin-bottom: 1.5rem;
+}
+
+.feature__list__item:last-child {
+  margin-bottom: 0;
+}
+
 @media screen and (min-width: 1000px) {
   .feature__list__item {
     width: calc(33% - 25px);
@@ -360,14 +362,44 @@ button:focus {
   line-height: 1;
 }
 
-.price__list__item {
+.switch-tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.switch-tab__item {
   text-align: center;
+  background: transparent;
+  border: 1px solid #535353;
+  padding: 1rem 0;
+  width: 50%;
+}
+
+.switch-tab__item:first-child {
+  border-radius: 8px 0 0 8px;
+}
+
+.switch-tab__item:last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+.switch-tab__item.active {
+  background: #006b3d;
+  color: #fff;
+}
+
+.price__list__item {
+  display: none;
+  text-align: center;
+  margin: 0 auto;
   width: 100%;
 }
 
 @media screen and (min-width: 1000px) {
   .price__list__item {
-    width: calc(50% - 25px);
+    width: 50%;
   }
 }
 
@@ -436,9 +468,22 @@ button:focus {
   padding-bottom: 0.75rem;
 }
 
+.price__list__item.show {
+  display: block;
+}
+
 .question__list {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.question__list .question__list__item {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.question__list .question__list__item:last-child {
+  margin-bottom: 0;
 }
 
 @media screen and (min-width: 1000px) {
@@ -454,7 +499,6 @@ button:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-bottom: 1.5rem;
 }
 
 .question__list .question__list__item .question-text h3 {
@@ -467,9 +511,35 @@ button:focus {
   }
 }
 
+.question__list .question__list__item .question-text img {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+@media screen and (min-width: 1000px) {
+  .question__list .question__list__item .question-text img {
+    display: none;
+  }
+}
+
+.question__list .question__list__item .question-text img.rotate {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
 .question__list .question__list__item .answer-text {
+  display: none;
   padding-top: 1rem;
+  margin-top: 1.5rem;
   border-top: 1px solid #c1c1c1;
+}
+
+@media screen and (min-width: 1000px) {
+  .question__list .question__list__item .answer-text {
+    display: block;
+  }
 }
 
 .contact__form {
