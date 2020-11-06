@@ -512,6 +512,12 @@ button:focus {
   transition: all 0.2s linear;
 }
 
+@media screen and (min-width: 1000px) {
+  .question__list .question__list__item .question-text img {
+    display: none;
+  }
+}
+
 .question__list .question__list__item .answer-text {
   display: none;
   padding-top: 1rem;

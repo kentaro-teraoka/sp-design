@@ -145,6 +145,9 @@
             }
             img{
                 transition: all 0.2s linear;
+                @include pc{
+                    display: none;
+                }
             }
         }
         .answer-text{
