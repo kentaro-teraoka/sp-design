@@ -191,14 +191,19 @@ button:focus {
 }
 
 .header .header-contents__sp-nav {
-  display: none;
   position: absolute;
-  top: 0;
+  bottom: calc(0px + 80px);
   left: 0;
   background: rgba(0, 107, 61, 0.8);
   width: 100%;
   padding: 104px 0 64px;
   z-index: 30;
+}
+
+@media screen and (min-width: 1000px) {
+  .header .header-contents__sp-nav {
+    bottom: calc(0px + 112px);
+  }
 }
 
 .header .header-contents__sp-nav__nav-item {
@@ -217,6 +222,7 @@ button:focus {
 .header .header-contents__sp-nav__nav-item a {
   color: #fff;
 }
+
 
 .header .header-contents__pc-nav {
   display: none;
