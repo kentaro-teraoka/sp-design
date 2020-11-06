@@ -475,6 +475,7 @@ button:focus {
 
 .question__list .question__list__item {
   margin-bottom: 1.5rem;
+  width: 100%;
 }
 
 .question__list .question__list__item:last-child {
@@ -494,7 +495,6 @@ button:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-bottom: 1.5rem;
 }
 
 .question__list .question__list__item .question-text h3 {
@@ -508,8 +508,20 @@ button:focus {
 }
 
 .question__list .question__list__item .answer-text {
+  display: none;
   padding-top: 1rem;
+  margin-top: 1.5rem;
   border-top: 1px solid #c1c1c1;
+}
+
+@media screen and (min-width: 1000px) {
+  .question__list .question__list__item .answer-text {
+    display: block;
+  }
+}
+
+.question__list .question__list__item .answer-text.open {
+  display: block;
 }
 
 .contact__form {

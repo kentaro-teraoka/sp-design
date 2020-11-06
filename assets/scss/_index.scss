@@ -130,13 +130,13 @@
     flex-wrap: wrap;
     .question__list__item{
         @include list-margin;
+        width: 100%;
         @include pc{
             width: $sp-2column;
         }
         .question-text{
             display: flex;
             justify-content: space-between;
-            padding-bottom: 1.5rem;
             h3{
                 font-size: $sp-font-size-h3;
                 @include pc{
@@ -145,8 +145,16 @@
             }
         }
         .answer-text{
+            display: none;
             padding-top: 1rem;
+            margin-top: 1.5rem;
             border-top: $border;
+            @include pc{
+                display: block;
+            }
+        }
+        .answer-text.open{
+            display: block;
         }
     }
 }

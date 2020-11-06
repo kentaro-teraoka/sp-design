@@ -3,7 +3,7 @@ $(function(){
 
     // メニューボタンにopenクラスを付与
     $(".header-contents__menu-btn").click(function(){
-        let nav = $(this).siblings(".header-contents__sp-nav")
+        let nav = $(this).siblings(".header-contents__sp-nav");
         nav.toggleClass("open");
         if(nav.hasClass("open")){
             $(this).children("img").attr("src", "assets/img/menu_icon_close.svg"); //openクラスついてたらバツボタン
@@ -36,6 +36,17 @@ $(function(){
         let index = $(".switch-tab__item").index($(this)); //クリックしたタブが何番目か調べる
         $(".price__list__item").siblings().removeClass("show"); //全てのリストアイテムからshowクラス削除
         $(".price__list__item").eq(index).addClass("show"); //タブの番号と同じ順番のリストアイテムにshowクラスを付与
+    });
+
+
+    // sp時、questionのリストアイテムをアコーディオン切り替えに
+    $(".question-text").click(function(){
+        $(this).next().toggleClass("open");
+        if($(this).next().hasClass("open")){
+            $(this).children("img").css("transform", "rotate(-90deg)");
+        }else{
+            $(this).children("img").css("transform", "rotate(0deg)");
+        }
     });
 
 
