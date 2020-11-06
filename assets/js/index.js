@@ -3,8 +3,9 @@ $(function(){
 
     // メニューボタンにopenクラスを付与
     $(".header-contents__menu-btn").click(function(){
-        $(this).siblings(".header-contents__sp-nav").toggleClass("open");
-        if($(this).siblings(".header-contents__sp-nav").hasClass("open")){
+        let nav = $(this).siblings(".header-contents__sp-nav")
+        nav.toggleClass("open");
+        if(nav.hasClass("open")){
             $(this).children("img").attr("src", "assets/img/menu_icon_close.svg"); //openクラスついてたらバツボタン
         }else{
             $(this).children("img").attr("src", "assets/img/menu_icon.svg");　//openクラスついてなかったらメニューボタン
@@ -16,9 +17,15 @@ $(function(){
     $(window).scroll(function(){
         let scrollHeight = $(this).scrollTop();
         if(scrollHeight > topHeight){
-            $(".header").css("position", "fixed");
+            $(".header").css({
+                position: "fixed",
+                background: "rgba(0,107,61, 0.8)"
+            });
         } else{
-            $(".header").css("position", "absolute");
+            $(".header").css({
+                position: "absolute",
+                background: "transparent"
+            });
         }
     });
 
