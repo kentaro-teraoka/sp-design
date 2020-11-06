@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="508" height="275" viewBox="0 0 508 275">
+  <defs>
+    <filter id="爬虫類たちを_君の手に_" x="0" y="31" width="508" height="244" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.4"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="はちゅうるい" x="22" y="0" width="230" height="46" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.4"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="きみ" x="9" y="147" width="81" height="46" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-opacity="0.4"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="て" x="189" y="147" width="46" height="46" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-4"/>
+      <feFlood flood-opacity="0.4"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="text" transform="translate(27 59)">
+    <g transform="matrix(1, 0, 0, 1, -27, -59)" filter="url(#爬虫類たちを_君の手に_)">
+      <text id="爬虫類たちを_君の手に_2" data-name="爬虫類たちを
+君の手に。" transform="translate(9 112)" fill="#fff" font-size="82" font-family="TsukuARdGothic-Bold, Tsukushi A Round Gothic" font-weight="700"><tspan x="0" y="0">爬虫類たちを</tspan><tspan x="0" y="144">君の手に。</tspan></text>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -27, -59)" filter="url(#はちゅうるい)">
+      <text id="はちゅうるい-2" data-name="はちゅうるい" transform="translate(31 31)" fill="#fff" font-size="28" font-family="TsukuARdGothic-Regular, Tsukushi A Round Gothic" letter-spacing="0.32em"><tspan x="0" y="0">はちゅうるい</tspan></text>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -27, -59)" filter="url(#きみ)">
+      <text id="きみ-2" data-name="きみ" transform="translate(18 178)" fill="#fff" font-size="28" font-family="TsukuARdGothic-Regular, Tsukushi A Round Gothic" letter-spacing="0.25em"><tspan x="0" y="0">きみ</tspan></text>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -27, -59)" filter="url(#て)">
+      <text id="て-2" data-name="て" transform="translate(198 178)" fill="#fff" font-size="28" font-family="TsukuARdGothic-Regular, Tsukushi A Round Gothic" letter-spacing="0.25em"><tspan x="0" y="0">て</tspan></text>
+    </g>
+  </g>
+</svg>

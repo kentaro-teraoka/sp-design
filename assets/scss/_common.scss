@@ -1,0 +1,175 @@
+// common
+.contents-section{
+    max-width: 300px;
+    padding: 3.75rem 0 2.5rem;
+    margin: 0 auto; 
+    @include pc{
+        max-width: 1000px;
+        padding-top: 6rem;
+        padding-bottom: 4rem;
+    }
+    .section__heading{
+        text-align: center;
+        font-size: $sp-font-size-h2;
+        margin-bottom: 1.5rem;
+        position: relative;
+        @include pc{
+            font-size: $pc-font-size-h2;
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+        }
+        &::after{
+            content: url(../img/heading-accent.svg);
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            @include pc{
+                content: url(../img/heading-accent-pc.svg);
+            }
+        }
+    }
+    .section__list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include pc{
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        &__item{
+            box-sizing: border-box;
+            &.radius-shadow{
+                background: #fff;
+                padding: 1.5rem;
+                border-radius: 8px;
+                box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+            }
+        }
+    }
+}
+
+// header
+.header{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 20;
+    transition: all 0.2s linear;
+    .header-contents{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        padding: $sp-top-padding;
+        position: relative;
+        @include pc{
+            height: 112px;
+            padding: $pc-top-padding;
+        }
+        &__logo{
+            z-index: 50;
+            img{
+                height: 36px;
+                @include pc{
+                    height: 48px;
+                }
+            }
+        }
+        &__menu-btn{
+            display: block;
+            z-index: 40;
+            @include pc{
+                display: none;
+            }
+            img{
+                height: 32px;
+            }
+        }
+        &__sp-nav{
+            position: absolute;
+            bottom: calc(0px + #{$sp-header-height}); //アニメーション実装のためのもの
+            left: 0;
+            background: rgba(0,107,61, 0.8);
+            width: 100%;
+            padding: 104px 0 64px;
+            z-index: 30;
+            // transition: all 300ms 0s ease;
+            @include pc{
+                bottom: calc(0px + #{$pc-header-height});
+            }
+            &__nav-item{
+                text-align: center;
+                font-size: 1.5rem;
+                width: 200px;
+                margin: auto;
+                padding: 1rem;
+                text-shadow: $text-shadow;
+                &:not(:last-child){
+                    border-bottom: $border;
+                }
+                a{
+                    color: #fff;
+                }
+            }
+        }
+        &__pc-nav{
+            display: none;
+            @include pc{
+                display: flex;
+            }
+            &__nav-item{
+                padding-left: 2rem;
+                text-shadow: $text-shadow;
+                a{
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+// footer
+.footer{
+    background: #006b3d;
+    text-align: center;
+    padding: 3.75rem 0 2.5rem;
+    &__logo{
+        margin-bottom: 1.5rem;
+        img{
+            width: 97px;
+        }
+    }
+    &__nav{
+        display: flex;
+        justify-content: center;
+        font-size: 10px;
+        margin-bottom: 1rem;
+        @include pc{
+            font-size: 12px;
+        }
+        &__item{
+            padding: 0 0.5rem;
+            border-right: $border;
+            a{
+                color: #f8f8f8;
+            }
+            &:last-child{
+                border-right: none;
+            }
+        }
+    }
+    &__copyright{
+        font-size: 10px;
+        transform: scale(0.8);
+        color: #c1c1c1;
+        @include pc{
+            font-size: 10px;
+        }
+    }
+}

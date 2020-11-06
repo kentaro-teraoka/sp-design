@@ -1,0 +1,59 @@
+// 変数
+$text-color: #535353;
+$text-shadow: 0px 3px 6px rgba(0,0,0,0.4);
+$border: 1px solid #c1c1c1;
+$sp-2column: calc(50% - 25px);
+$sp-3column: calc(33% - 25px);
+$sp-top-padding: 0 1rem;
+$pc-top-padding: 0 6rem;
+$sp-font-size-default: 16px;
+$pc-font-size-default: 18px;
+$sp-font-size-h2: 24px;
+$pc-font-size-h2: 40px;
+$sp-font-size-h3: 20px;
+$pc-font-size-h3: 26px;
+
+// mixin
+@mixin list-margin{
+    margin-bottom: 1.5rem;
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+
+
+// default
+body{
+    font-family: 'TsukuARdGothic-Regular', 'M PLUS Rounded 1c', sans-serif;
+    background: #f8f8f8;
+    color: $text-color;
+    margin: 0;
+    font-size: $sp-font-size-default;
+    @include pc{
+        font-size: $pc-font-size-default;
+    }
+}
+h1, h2, h3, h4 ,h5 ,h6{
+    margin: 0;
+}
+p{
+    font-size: $sp-font-size-default;
+    line-height: 1.75;
+    margin: 0;
+}
+a{
+    color: $text-color;
+    text-decoration: none;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+button{
+    background: transparent;
+    border: none;
+}
+button:focus{
+    outline: none;
+}

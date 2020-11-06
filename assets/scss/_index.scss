@@ -1,0 +1,220 @@
+// top
+.top{
+    display: flex;
+    align-items: center;
+    background: {
+        image: url(../img/top_bg.jpg);
+        position: 60% center;
+        size: cover;
+        repeat: no-repeat;
+    }
+    position: relative;
+    height: 100vh;
+    padding: $sp-top-padding;
+    @include pc{
+        padding: $pc-top-padding;
+    }
+    &__slogan{
+        z-index: 10;
+        img{
+            width: 305px;
+        }
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(251,96,126,0.2);
+        z-index: 0;
+    }
+}
+
+
+// feature
+.feature__list__item{
+    @include list-margin;
+    @include pc{
+        width: $sp-3column;
+    }
+    p{
+        span{
+            font-size: 3rem; 
+            line-height: 1;
+        }
+    }
+}
+
+// price
+.switch-tab{
+    display: flex;
+    margin-bottom: 1.5rem;
+    &__item{
+        text-align: center;
+        background: transparent;
+        border: 1px solid $text-color;
+        padding: 1rem 0;
+        width: 50%;
+        &:first-child{
+            border-radius: 8px 0 0 8px;
+        }
+        &:last-child{
+            border-radius: 0 8px 8px 0;
+        }
+    }
+    &__item.active{
+        background: #006b3d;
+        color: #fff;
+    }
+}
+.price__list__item{
+    display: none;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    @include pc{
+        width: 50%;
+    }
+    h3{
+        font-size: $sp-font-size-h3;
+        font-weight: normal;
+        margin-bottom: 1rem;
+        @include pc{
+            font-size: $pc-font-size-h3;
+        }
+    }
+    &__monthly{
+        border-bottom: $border;
+        padding-bottom: 0.75rem;
+        p{
+            font-weight: bold;
+            .yen{
+                font-size: 2rem;
+                @include pc{
+                    font-size: 2.5rem;
+                }
+            }
+            .num{
+                font-size: 2.5rem;
+                @include pc{
+                    font-size: 3.5rem;
+                }
+            }
+            .num.basic{
+                color: #06a561;
+            }
+            .num.premium{
+                color: #067aa5;
+            }
+        }
+    }
+    &__text{
+        display: flex;
+        justify-content: space-between;
+        padding: 0.75rem 1rem 0;
+        margin: 0;
+        &:not(:last-child){
+            border-bottom: $border;
+            padding-bottom: 0.75rem;
+        }
+    }
+}
+.price__list__item.show{
+    display: block;
+}
+
+// question
+.question__list{
+    flex-wrap: wrap;
+    .question__list__item{
+        @include list-margin;
+        width: 100%;
+        @include pc{
+            width: $sp-2column;
+        }
+        .question-text{
+            display: flex;
+            justify-content: space-between;
+            h3{
+                font-size: $sp-font-size-h3;
+                @include pc{
+                    font-size: $pc-font-size-h3;
+                }
+            }
+            img{
+                transform: rotate(0deg);
+                transition: all 0.2s linear;
+                @include pc{
+                    display: none;
+                }
+            }
+            img.rotate{
+                transform: rotate(-90deg);
+            }
+        }
+        .answer-text{
+            display: none;
+            padding-top: 1rem;
+            margin-top: 1.5rem;
+            border-top: $border;
+            @include pc{
+                display: block;
+            }
+        }
+    }
+}
+
+
+// contact
+.contact__form{
+    max-width: 475px;
+    margin: 0 auto;
+    .contact__form__item{
+        margin-bottom: 1rem;
+        @include pc{
+            margin-bottom: 1.25rem;
+        }
+        label{
+            display: block;
+            font-size: $sp-font-size-default;
+            margin-bottom: 0.5rem;
+            @include pc{
+                font-size: $pc-font-size-default;
+            }
+        }
+        input{
+            height: 40px;
+        }
+        input,textarea{
+            width: 100%;
+            border: $border;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: $sp-font-size-default;
+            text-indent: 8px;
+            color: $text-color;
+        }
+        .btn-brand{
+            font-weight: bold;
+            font-size: $sp-font-size-default;
+            color: #fff;
+            background: #fb607e;
+            border: none;
+            border-radius: 8px;
+            width: auto;
+            padding: 1rem 2.5rem;
+            @include pc{
+                font-size: $pc-font-size-default;
+            }
+        }
+        &:last-child{
+            margin: 0;
+        }
+        &.text-center{
+            text-align: center;
+        }
+    }
+    
+}

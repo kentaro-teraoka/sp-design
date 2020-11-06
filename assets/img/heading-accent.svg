@@ -1,0 +1,6 @@
+<svg id="heading-accent1" xmlns="http://www.w3.org/2000/svg" width="64" height="4" viewBox="0 0 64 4">
+  <circle id="楕円形_1" data-name="楕円形 1" cx="2" cy="2" r="2" fill="#e04285"/>
+  <circle id="楕円形_2" data-name="楕円形 2" cx="2" cy="2" r="2" transform="translate(20)" fill="#ffbf01"/>
+  <circle id="楕円形_3" data-name="楕円形 3" cx="2" cy="2" r="2" transform="translate(40)" fill="#006b3d"/>
+  <circle id="楕円形_4" data-name="楕円形 4" cx="2" cy="2" r="2" transform="translate(60)" fill="#fc8b03"/>
+</svg>
