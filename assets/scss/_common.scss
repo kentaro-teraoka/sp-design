@@ -65,11 +65,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: $sp-header-height;
+        height: 80px;
         padding: $sp-top-padding;
         position: relative;
         @include pc{
-            height: $pc-header-height;
+            height: 112px;
             padding: $pc-top-padding;
         }
         &__logo{
