@@ -536,10 +536,6 @@ button:focus {
   }
 }
 
-.question__list .question__list__item .answer-text.open {
-  display: block;
-}
-
 .contact__form {
   max-width: 475px;
   margin: 0 auto;
