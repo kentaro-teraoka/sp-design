@@ -1,21 +1,44 @@
 $(function(){
 
 
-    // メニューボタンにopenクラスを付与
-    $(".header-contents__menu-btn").click(function(){
-        $(this).siblings(".header-contents__sp-nav").slideToggle();
-        $(this).toggleClass("open");
-        if($(this).hasClass("open")){
-            $(this).children("img").attr("src", "assets/img/menu_icon_close.svg"); //openクラスついてたらバツボタン
+    function toggleNav(){
+        $(".header-contents__sp-nav").slideToggle();
+        $(".header-contents__menu-btn").toggleClass("open");
+        if($(".header-contents__menu-btn").hasClass("open")){
+            $(".header-contents__menu-btn").children("img").attr("src", "assets/img/menu_icon_close.svg"); //openクラスついてたらバツボタン
         }else{
-            $(this).children("img").attr("src", "assets/img/menu_icon.svg");　//openクラスついてなかったらメニューボタン
+            $(".header-contents__menu-btn").children("img").attr("src", "assets/img/menu_icon.svg");　//openクラスついてなかったらメニューボタン
+        }
+    }
+
+    let windowWidth = window.innerWidth;
+
+    // メニューボタン開閉
+    $(".header-contents__menu-btn").click(function(){
+        toggleNav();
+    });
+
+    // アンカーリンクのスクロール
+    $(".section-link").click(function(){
+        let anchorLink = $(this).attr("href");
+        let sectionPos = $(anchorLink).offset().top;
+        $("body, html").animate({scrollTop: sectionPos}, 500);
+        if(windowWidth < 1000){
+            toggleNav();
+            console.log(windowWidth);
         }
     });
 
+    // topへのアンカーリンクのスクロール
+    $(".top-link").click(function(){
+        $("body, html").animate({scrollTop: 0}, 500);
+    });
+
+
     // topを超えた時にheaderを追従させる
-    let topHeight = $(".top").height();
     $(window).scroll(function(){
         let scrollHeight = $(this).scrollTop();
+        let topHeight = $(".top").height();
         if(scrollHeight >= topHeight){
             $(".header").css({
                 position: "fixed",
@@ -41,7 +64,6 @@ $(function(){
 
     // sp時、questionのリストアイテムをアコーディオン切り替えに
     $(".question-text").click(function(){
-        let windowWidth = window.innerWidth;
         if(windowWidth < 1000){
             $(this).next().slideToggle(); //answer-textの開閉
             $(this).children("img").toggleClass("rotate");
