@@ -3,9 +3,9 @@ $(function(){
 
     // メニューボタンにopenクラスを付与
     $(".header-contents__menu-btn").click(function(){
-        let $nav = $(this).siblings(".header-contents__sp-nav");
-        $nav.toggleClass("open");
-        if($nav.hasClass("open")){
+        $(this).siblings(".header-contents__sp-nav").slideToggle();
+        $(this).toggleClass("open");
+        if($(this).hasClass("open")){
             $(this).children("img").attr("src", "assets/img/menu_icon_close.svg"); //openクラスついてたらバツボタン
         }else{
             $(this).children("img").attr("src", "assets/img/menu_icon.svg");　//openクラスついてなかったらメニューボタン
@@ -16,7 +16,7 @@ $(function(){
     let topHeight = $(".top").height();
     $(window).scroll(function(){
         let scrollHeight = $(this).scrollTop();
-        if(scrollHeight > topHeight){
+        if(scrollHeight >= topHeight){
             $(".header").css({
                 position: "fixed",
                 background: "rgba(0,107,61, 0.8)"

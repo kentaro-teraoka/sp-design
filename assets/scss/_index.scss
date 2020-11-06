@@ -10,9 +10,9 @@
     }
     position: relative;
     height: 100vh;
-    padding: $top-padding-sp;
+    padding: $sp-top-padding;
     @include pc{
-        padding: $top-padding-pc;
+        padding: $pc-top-padding;
     }
     &__slogan{
         z-index: 10;

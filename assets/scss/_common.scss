@@ -64,12 +64,12 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 80px;
-        padding: $top-padding-sp;
+        height: $sp-header-height;
+        padding: $sp-top-padding;
         position: relative;
         @include pc{
-            height: 112px;
-            padding: $top-padding-pc;
+            height: $pc-header-height;
+            padding: $pc-top-padding;
         }
         &__logo{
             z-index: 50;
@@ -113,9 +113,6 @@
                     color: #fff;
                 }
             }
-        }
-        &__sp-nav.open{
-            display: block;
         }
         &__pc-nav{
             display: none;

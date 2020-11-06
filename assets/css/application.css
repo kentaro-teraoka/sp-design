@@ -216,10 +216,6 @@ button:focus {
   color: #fff;
 }
 
-.header .header-contents__sp-nav.open {
-  display: block;
-}
-
 .header .header-contents__pc-nav {
   display: none;
 }
