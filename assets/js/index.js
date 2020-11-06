@@ -3,9 +3,9 @@ $(function(){
 
     // メニューボタンにopenクラスを付与
     $(".header-contents__menu-btn").click(function(){
-        let nav = $(this).siblings(".header-contents__sp-nav");
-        nav.toggleClass("open");
-        if(nav.hasClass("open")){
+        let $nav = $(this).siblings(".header-contents__sp-nav");
+        $nav.toggleClass("open");
+        if($nav.hasClass("open")){
             $(this).children("img").attr("src", "assets/img/menu_icon_close.svg"); //openクラスついてたらバツボタン
         }else{
             $(this).children("img").attr("src", "assets/img/menu_icon.svg");　//openクラスついてなかったらメニューボタン
@@ -41,8 +41,9 @@ $(function(){
 
     // sp時、questionのリストアイテムをアコーディオン切り替えに
     $(".question-text").click(function(){
+        let windowWidth = window.innerWidth;
         $(this).next().toggleClass("open");
-        if($(this).next().hasClass("open")){
+        if($(this).next().hasClass("open") && windowWidth <= 1000){
             $(this).children("img").css("transform", "rotate(-90deg)");
         }else{
             $(this).children("img").css("transform", "rotate(0deg)");
